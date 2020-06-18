@@ -1,11 +1,11 @@
 'use strict';
 
-angular.module('app', ['ngRoute', 'supportApp'])
+angular.module('chatApp', ['ngRoute'])
   .config(['$routeProvider',
     function config($routeProvider) {
       $routeProvider.
         when('/', {
-          template: '<support-app></support-app>'
+          template: '<div id="main"><toolbar></toolbar><welcome></welcome></div>'
         });
     }
 ]);
