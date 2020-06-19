@@ -12,7 +12,18 @@ angular.module('supportApp')
 
                 $scope.onChatButtonClick = function handleChatButtonClick() {
                     $scope.isChatOpen = true;
-                }
+                };
+                window.addEventListener('message', function (event) {
+                    switch (event.data.msg) {
+                        case 'close':
+                            {
+
+                                $scope.isChatOpen = false;
+                                $scope.$apply();
+                                break;
+                            }
+                    }
+                }, false);
             }],
             link: function link($scope) {
                 $scope.chatIFrameStyles = {

@@ -6,7 +6,7 @@ angular.module('chatApp')
             scope: {
                 placeholder: '@',
                 onUserMessage: '&',
-                getMessage: '=',
+                getMessage: '=?',
             },
             restrict: 'E',
             templateUrl: 'components/messageBox/messageBox.template.html',

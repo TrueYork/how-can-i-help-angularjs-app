@@ -2,6 +2,9 @@
 
 angular.module('chatApp')
     .component('toolbar', {
+        bindings: {
+            close: '&',
+        },
         templateUrl: 'components/toolbar/toolbar.template.html',
         controller: function ToolbarController($scope) {
             $scope.buttons = [
@@ -11,7 +14,7 @@ angular.module('chatApp')
             ];
 
             function onClose() {
-                alert(123);
+                $scope.$ctrl.close();
             }
         }
     });

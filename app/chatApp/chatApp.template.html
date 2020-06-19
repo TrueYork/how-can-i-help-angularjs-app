@@ -1,0 +1,9 @@
+<div id="main">
+    <toolbar close="closeChatApp()"></toolbar>
+    <welcome ng-if="!isChatActive" on-start-chat="startChat(msg)"></welcome>
+    <chat ng-if="isChatActive"
+        initial-message="{{initialMessage}}"
+        on-user-message="onUserMessage(msg)"
+        callbacks="chatCallbacks">
+    </chat>  
+</div>
