@@ -1,0 +1,11 @@
+<button id="chat-icon"
+        ng-if="!isChatOpen"
+        ng-style="chatIconStyles"
+        ng-click="onChatButtonClick()">
+        ?
+</button>
+<iframe id="chat"
+        ng-if="isChatOpen"
+        ng-style="chatIFrameStyles"
+        src="chatApp/chatApp.html">
+</iframe>

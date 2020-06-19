@@ -1,0 +1,12 @@
+<div class="header">
+    <p class="title">{{title}}</p>
+</div>
+<div class="message-box-holder">
+    <message-box placeholder="{{messageBoxPlaceholder}}"
+                on-user-message="startChat(msg)"
+                get-message="getUserMessage">
+    </message-box>
+</div>
+<button class="start-chat-button" ng-click="onStartChatButtonClick()">
+    Start Chat
+</button>
